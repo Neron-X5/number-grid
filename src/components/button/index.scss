@@ -1,0 +1,43 @@
+@import '../../configs/variable.scss';
+
+.button {
+    display: inline-block;
+    padding: 15px 32px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.counter-button {
+        background-color: #4caf50;
+        color: $colorFontSecondary;
+        border: none;
+        margin-right: 200px;
+    }
+
+    &.reset-button {
+        background-color: transparent;
+        color: $colorFontPrimary;
+        border: 2px solid #f44336;
+        margin-left: 200px;
+    }
+
+    @media (max-width: 450px) {
+        padding: 10px 20px;
+        font-size: 16px;
+
+        &.counter-button {
+            margin-right: 45px;
+        }
+
+        &.reset-button {
+            margin-left: 45px;
+        }
+    }
+}

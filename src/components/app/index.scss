@@ -1,4 +1,74 @@
+@import '../../configs/variable.scss';
+@import '../../configs/mixins.scss';
+
 .app-container {
-    padding: 20px;
+    padding: 0;
     text-align: center;
+
+    .header {
+        padding: 40px;
+        font-size: 2em;
+        font-weight: bold;
+
+        @include color-combo($primaryThemeColor, $colorFontSecondary);
+    }
+
+    .description {
+        margin: 20px;
+        font-size: 1.4em;
+    }
+
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $colorFontPrimary;
+        opacity: 0.8;
+
+        .notification {
+            margin-top: 40vh;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: $colorFontSecondary;
+
+            div {
+                font-size: 2em;
+                font-weight: bold;
+            }
+
+            p {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .header {
+            padding: 30px;
+            font-size: 1.2em;
+        }
+
+        .description {
+            font-size: 1.2em;
+        }
+
+        .overlay {
+            .notification {
+                div {
+                    font-size: 1.2em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+
+                small {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
 }
