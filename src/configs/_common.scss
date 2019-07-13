@@ -1,0 +1,14 @@
+@import './configs/variable.scss';
+@import './configs/mixins.scss';
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}

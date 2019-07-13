@@ -1,0 +1,17 @@
+@mixin color-combo($bgColor, $fontColor) {
+    background-color: $bgColor;
+    color: $fontColor;
+}
+
+@mixin veritcal-gradient($from, $to) {
+    background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background: -webkit-linear-gradient(top, $from, $to);
+    background: -o-linear-gradient(top, $from, $to);
+    background: linear-gradient(to bottom, $from, $to);
+}
+
+@mixin horizontal-gradient($from, $to) {
+    background: -webkit-linear-gradient(right, $from, $to);
+    background: -o-linear-gradient(right, $from, $to);
+    background: linear-gradient(to bottom right, $from, $to);
+}

@@ -1,0 +1,19 @@
+@import './configs/common.scss';
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: $pageFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: normal;
+  font-style: normal;
+
+  @include color-combo($secondaryThemeColor,$colorFontPrimary);
+}
+
+code {
+  font-family: $numberFont;
+}
